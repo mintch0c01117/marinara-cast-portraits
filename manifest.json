@@ -1,0 +1,13 @@
+{
+  "kind": "marinara.personal-extension",
+  "version": 1,
+  "config": {
+    "name": "출연진 초상화",
+    "version": "1.2.4",
+    "description": "게임 모드 NPC에 얼굴 이미지, 전신 이미지(감정별 추가 가능), 외형 태그를 고정합니다. 캐릭터 카드 없이 이름으로 맞춥니다.",
+    "runtime": "client",
+    "capabilities": ["full_page_access"],
+    "jsPath": "extension.js",
+    "cssPath": "extension.css"
+  }
+}
