@@ -134,7 +134,7 @@ function aliasesOf(entry) {
     .filter(Boolean);
 }
 
-// "세이버 (네로)" or "세이버/네로" also count as each of their parts.
+// "기사 (아리아)" or "기사/아리아" also count as each of their parts.
 function nameTokens(name) {
   const tokens = new Set([norm(name)]);
   for (const part of String(name ?? "").split(/[/()（）\[\]|]/)) {
@@ -793,7 +793,7 @@ function entryCard(entry) {
   const names = el("input", {
     type: "text",
     value: entry.names,
-    placeholder: "세이버, 네로, 네로 클라우디우스",
+    placeholder: "기사, 아리아, 아리아 벨로나",
   });
   names.addEventListener("input", () => {
     entry.names = names.value;
@@ -803,7 +803,7 @@ function entryCard(entry) {
   });
   const tags = el("textarea", {
     rows: 3,
-    placeholder: "1girl, blonde hair, green eyes, ahoge, red dress, ...",
+    placeholder: "1girl, silver hair, blue eyes, armor, long cape, ...",
   });
   tags.value = entry.tags;
   tags.addEventListener("input", () => {
@@ -1356,7 +1356,7 @@ function buildUi() {
       setBar(),
       el("p", {
         class: "malu-cast-help",
-        text: "이름이 맞는 NPC에 얼굴 이미지와 외형 태그를 고정합니다. 클래스명과 진명을 모두 적어 두면 진명이 밝혀진 뒤에도 이어집니다.",
+        text: "이름이 맞는 NPC에 얼굴 이미지와 외형 태그를 고정합니다. 호칭과 본명을 모두 적어 두면 이름이 밝혀진 뒤에도 이어집니다.",
       }),
       el("datalist", { id: "malu-cast-expressions" }, DEFAULT_EXPRESSIONS.map((value) => el("option", { value }))),
       listEl,
